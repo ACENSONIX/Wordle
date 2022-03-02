@@ -1,0 +1,38 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  background-color: #000;
+}
+
+h1 {
+  color: rgb(253, 253, 253);
+  font-family: sans-serif;
+  font-size: 50px;
+  padding-left: 620px;
+}
+
+.box {
+  height: 80px;
+  width: 80px;
+  background-color: #000;
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.input-lines {
+  margin-left: 500px;
+}
+
+.pres {
+  background-color: rgb(223, 207, 62);
+}
+
+.cor-pos {
+  background-color: rgb(149, 145, 158);
+}
