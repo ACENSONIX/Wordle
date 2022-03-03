@@ -32,18 +32,29 @@ function del_enter() {
 }
 
 function validate() {
-  let new_word = "sahil";
+  var new_word = "sahil";
   var array = document.getElementById("line-" + j).children;
   let in_ans = "";
+  let count = 0;
   for (k = 0; k < array.length; k++) {
     let alpha = document.getElementById(array[k].id);
     in_ans = in_ans + document.getElementById(alpha.id).value;
     document.getElementById(alpha.id).readOnly = true;
     if (in_ans[k] == new_word[k]) {
+      count++;
       document.getElementById(alpha.id).style.backgroundColor = "#538d4e";
     } else if (new_word.includes(in_ans[k])) {
       document.getElementById(alpha.id).style.backgroundColor = "#b59f3b";
     }
+  }
+  if (count == 5) {
+    alert("Congratulations!!! You guessed it in " + j + " attempts");
+    setTimeout(function () {
+      window.location.reload(1);
+    }, 2000);
+  } else if (j == 6) {
+    alert("BETTER LUCK NEXT TIME!");
+    location.reload();
   }
   j++;
 }
